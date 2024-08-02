@@ -27,9 +27,9 @@ function BudgetPlanner() {
     return (
         <div>
             <div className="upperPart">
-                <h2>Budget: ${budget}</h2>
-                <h2>Remain: ${remainingBudget}</h2>
-                <h2>Spend: ${totalSpent}</h2>
+                <h2>Budget: RS {budget}</h2>
+                <h2>Remain: RS {remainingBudget}</h2>
+                <h2>Spend: RS {totalSpent}</h2>
             </div>
             <div className="expenses">
                 <h2>Expenses</h2>
@@ -39,7 +39,7 @@ function BudgetPlanner() {
                     ) : (
                         items.map((item, index) => (
                             <div key={index}>
-                               <h2> {item.name} - ${item.price}  <span onClick={()=>handleDeleteItem(index)}>Delete</span></h2>
+                               <h2> {item.name} - RS {item.price}  <span onClick={()=>handleDeleteItem(index)}>Delete</span></h2>
                             </div>
                         ))
                     )}
